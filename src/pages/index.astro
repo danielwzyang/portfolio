@@ -1,20 +1,62 @@
 ---
-import Layout from '../Layout.astro'
+import Layout from "../Layout.astro"
 ---
 
-<Layout title="daniel yang" description="">
-    <div class="w-[700px] max-w-[80vw] mx-auto text-xl text-justify my-10">
-        <h1 class="text-3xl my-5 text-white">Daniel Yang</h1>
-        <p class="text-[#757377]">
-            Hi! My name is Daniel and I'm a junior at Stuyvesant. Most people know me for my photography, but my main passion is software engineering.
-            <br><br>
-            I started coding in elementary school with game dev in Scratch, making simple games to entertain me and my brother. I tried progressing in middle school with Unity and C#, but I couldn't manage to make anything without a tutorial.
-            <br><br>
-            It wasn't until sophomore year of highschool that I began to build projects by myself. I made things like scripts to predict my Spotify Wrapped with python and recreations of my old Scratch games using Godot. 
-            <br><br>
-            Starting my own club also motivated me to make our website, which introduced me to frameworks like React / Next and Tailwind. I also trained a lot of my programming skills with Leetcode, and I'm thinking about competing in USACO.  
-            <br><br>
-            Currently, I mainly focus on web development with Next, but I'm also experimenting with other frameworks like Astro, which is what this site is built with. I also have a lot of random side projects that I work on whenever something interests me.
-        </p>
+<Layout title="Daniel Yang" description="" icon="/banana.svg">
+    <div class="h-[90vh] w-full flex items-center justify-center text-4xl" id="wrapper">
+        { "{username}".split("").map(e => <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>) }
     </div>
+    <script>
+        import anime from "animejs/lib/anime.es.js"
+
+        // text typing animation
+        document.querySelectorAll(".text").forEach((e, i) => {
+            setTimeout(() => {
+                e.classList.remove("hidden")
+            }, i * 150 + 1000)
+        })
+        
+        const letterWidth = 23.4
+        const wrapper = document.querySelectorAll("#wrapper")[0]
+
+        // text collapsing animation
+        anime({
+            targets: ".text",
+            translateX: {value: (e: Element, i: number) => letterWidth * (4.5 - i), duration: 500},
+            opacity: {value: 0, delay: 3300, duration: 200},
+            easing: "easeInBack",
+            delay: 3000,
+            complete: () => {
+                // adding new letters
+                wrapper.innerHTML = ""
+
+                "danielwzyang".split("").forEach(e => {
+                    const letter = document.createElement("h1")
+                    letter.classList.add("text")
+                    letter.classList.add("opacity-0")
+                    letter.innerHTML = e == " " ? "\u00A0" : e
+                    wrapper.appendChild(letter)
+                })
+                
+                // text expanding animation
+                anime({
+                    targets: ".text",
+                    translateX: [(e: Element, i: number) => letterWidth * (5.5 - i), 0],
+                    opacity: {value: 1, duration: 100},
+                    easing: "easeOutBack",
+                    duration: 500,
+                    endDelay: 200,
+                    complete: () => {
+                        // text moving animation
+                        anime({
+                            targets: wrapper,
+                            easing: "easeOutQuint",
+                            height: "100px"
+                        })
+                    }
+                })
+            }
+        })
+
+    </script>
 </Layout>

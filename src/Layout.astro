@@ -2,10 +2,11 @@
 interface Props {
 	title: string
     description: string
+    icon: string
 }
 
-const { title, description } = Astro.props
-import "@fontsource/gabarito"
+const { title, description, icon } = Astro.props
+import "@fontsource/azeret-mono"
 ---
 
 <!doctype html>
@@ -14,7 +15,7 @@ import "@fontsource/gabarito"
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={icon} />
 		<title>{title}</title>
 	</head>
 	<body class="bg-[#121114] text-white">

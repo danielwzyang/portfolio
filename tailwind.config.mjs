@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Gabarito", ...defaultTheme.fontFamily.sans]
+                sans: ["Azeret Mono", ...defaultTheme.fontFamily.sans]
             }
         },
     },
