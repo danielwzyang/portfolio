@@ -8,12 +8,10 @@ import Layout from "../Layout.astro"
     </div>
     <script>
         import anime from "animejs/lib/anime.es.js"
-
+        
         // text typing animation
         document.querySelectorAll(".text").forEach((e, i) => {
-            setTimeout(() => {
-                e.classList.remove("hidden")
-            }, i * 150 + 1000)
+            setTimeout(() => { e.classList.remove("hidden") }, i * 150 + 1000)
         })
         
         const letterWidth = 23.4
@@ -23,9 +21,9 @@ import Layout from "../Layout.astro"
         anime({
             targets: ".text",
             translateX: {value: (e: Element, i: number) => letterWidth * (4.5 - i), duration: 500},
-            opacity: {value: 0, delay: 3300, duration: 200},
+            opacity: {value: 0, delay: 3800, duration: 200},
             easing: "easeInBack",
-            delay: 3000,
+            delay: 3500,
             complete: () => {
                 // adding new letters
                 wrapper.innerHTML = ""
