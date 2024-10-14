@@ -2,7 +2,10 @@
 import Layout from "../Layout.astro"
 ---
 
-<Layout title="Daniel Yang" description="" icon="/icon.svg">
+<Layout title="Daniel Yang" description="My Portfolio">
+    <div id="skipWrapper" class="absolute right-1 top-1 flex items-center text-[#505050]">
+        <h1 class="hidden lg:block">[space]</h1><img id="skip" src="/skip.svg" alt="skip"/>
+    </div>
     <div class="h-[90vh] w-full flex items-center justify-center text-4xl" id="wrapper">
         { "{ username }".split("").map(e => <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>) }
     </div>
@@ -16,84 +19,13 @@ import Layout from "../Layout.astro"
         <p id="info">Recently, I started learning web development using frameworks like NextJS and TailwindCSS, and I made a couple websites for some clubs that I'm in. I'm currently trying out Astro since it's a lot more lightweight compared to Next, and it's what this site is made with.</p>
 
         <hr id="info" class="border-[#505050]">
-        <div id="socialsWrapper" class="w-fit ml-auto flex space-x-3">
+        <div id="socialsWrapper" class="w-full ml-auto justify-end flex space-x-3 relative">
+            <a id="socials" href="projects" class="absolute left-0 hover:underline">Projects</a>
             <a id="socials" href="https://github.com/danielwzyang/" target="_blank"><img src="/github.svg" alt="github"/></a>
             <a id="socials" href="mailto:danielwzyang@gmail.com" target="_blank"><img src="/email.svg" alt="email"/></a>
             <a id="socials" href="https://www.linkedin.com/in/danielwzyang/" target="_blank"><img src="/linkedin.svg" alt="linkedin"/></a>
         </div>
     </div>
-    
-    
 
-    <script>
-        import anime from "animejs/lib/anime.es.js"
-        
-        // text typing animation
-        document.querySelectorAll(".text").forEach((e, i) => {
-            setTimeout(() => { e.classList.remove("hidden") }, i * 150 + 500)
-        })
-        
-        const letterWidth = 23.4
-        const wrapper = document.querySelectorAll("#wrapper")[0]
-
-        // text collapsing animation
-        anime({
-            targets: ".text",
-            translateX: {value: (e: Element, i: number) => letterWidth * (4.5 - i), duration: 500},
-            opacity: {value: 0, delay: 2800, duration: 200},
-            easing: "easeInBack",
-            delay: 2500,
-            complete: () => {
-                // adding new letters
-                wrapper.innerHTML = ""
-
-                "danielwzyang".split("").forEach(e => {
-                    const letter = document.createElement("h1")
-                    letter.classList.add("text")
-                    letter.classList.add("opacity-0")
-                    letter.innerHTML = e == " " ? "\u00A0" : e
-                    wrapper.appendChild(letter)
-                })
-                
-                // text expanding animation
-                anime({
-                    targets: ".text",
-                    translateX: [(e: Element, i: number) => letterWidth * (5.5 - i), 0],
-                    opacity: {value: 1, duration: 100},
-                    easing: "easeOutBack",
-                    duration: 500,
-                    complete: () => {
-                        // reveal info animation
-                        const infoWrapper = document.querySelectorAll("#infoWrapper")[0]
-                        infoWrapper.classList.remove("hidden")
-                        infoWrapper.classList.add("flex-col")
-
-                        anime({
-                            targets: "#info",
-                            opacity: [0, 1],
-                            delay: anime.stagger(200),
-                            duration: 3000,
-                        })
-
-                        // stagger socials reveal
-                        anime({
-                            targets: "#socials",
-                            opacity: [0, 1],
-                            translateX: [-100, 0],
-                            delay: anime.stagger(100, { start: 1000, direction: "reverse" }),
-                            duration: 3000
-                        })
-
-                        // title moving animation
-                        anime({
-                            targets: wrapper,
-                            easing: "easeOutQuint",
-                            height: "7rem"
-                        })
-                    }
-                })
-            }
-        })
-
-    </script>
+    <script src="../homeAnimate.ts"></script>
 </Layout>
