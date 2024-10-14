@@ -1,10 +1,10 @@
 ---
 interface Props {
 	title: string
-    description: string
+    desc: string
 }
 
-const { title, description } = Astro.props
+const { title, desc } = Astro.props
 import "@fontsource/azeret-mono"
 ---
 
@@ -12,7 +12,7 @@ import "@fontsource/azeret-mono"
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content={desc} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
 		<title>{title}</title>

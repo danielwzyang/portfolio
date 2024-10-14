@@ -2,14 +2,14 @@
 import Layout from "../Layout.astro"
 ---
 
-<Layout title="Daniel Yang" description="My Portfolio">
+<Layout title="daniel yang" desc="my portfolio">
     <div id="skipWrapper" class="absolute right-1 top-1 flex items-center text-[#505050]">
         <h1 class="hidden lg:block">[space]</h1><img id="skip" src="/skip.svg" alt="skip"/>
     </div>
     <div class="h-[90vh] w-full flex items-center justify-center text-4xl" id="wrapper">
         { "{ username }".split("").map(e => <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>) }
     </div>
-    <div class="w-[600px] max-w-[85vw] text-[#505050] text-justify mx-auto hidden space-y-5" id="infoWrapper">
+    <div class="w-[600px] max-w-[80vw] text-[#505050] text-justify mx-auto hidden space-y-5" id="infoWrapper">
         <p id="info">Hi! My name is Daniel, and I'm a junior at Stuyvesant High School. I started coding in probably third or fourth grade and have been doing it ever since.</p>
 
         <p id="info">I started with Javascript, but I fell in love with Python for its simplicity. I made a couple scripts for fun to help me parse data, like predicting my Spotify Wrapped, scraping data from Amazon, and building HTML pages from text files. I also used Python to learn data structures and algorithms with Leetcode, and I've been trying to learn some C++ in hopes of competing.</p>
