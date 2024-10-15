@@ -6,7 +6,7 @@ import Layout from "../Layout.astro"
     <div id="skipWrapper" class="absolute right-1 top-1 flex items-center text-[#505050]">
         <h1 class="hidden lg:block">[space]</h1><img id="skip" src="/skip.svg" alt="skip"/>
     </div>
-    <div class="h-[90vh] w-full flex items-center justify-center text-4xl" id="wrapper">
+    <div class="h-[90vh] w-full flex items-center justify-center text-3xl sm:text-4xl" id="wrapper">
         { "{ username }".split("").map(e => <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>) }
     </div>
     <div class="w-[600px] max-w-[80vw] text-[#505050] text-justify mx-auto hidden space-y-5" id="infoWrapper">
@@ -27,5 +27,5 @@ import Layout from "../Layout.astro"
         </div>
     </div>
 
-    <script src="../homeAnimate.ts"></script>
+    <script src="./animate.ts"></script>
 </Layout>

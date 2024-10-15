@@ -141,13 +141,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"projects": {
-"apcsa-solutions.md": {
-	id: "apcsa-solutions.md";
-  slug: "apcsa-solutions";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
 "dillou.md": {
 	id: "dillou.md";
   slug: "dillou";
@@ -155,9 +148,9 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"flood-relief.md": {
-	id: "flood-relief.md";
-  slug: "flood-relief";
+"flood.md": {
+	id: "flood.md";
+  slug: "flood";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -176,9 +169,16 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"wrapped-predictor.md": {
-	id: "wrapped-predictor.md";
-  slug: "wrapped-predictor";
+"solutions.md": {
+	id: "solutions.md";
+  slug: "solutions";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"wrapped.md": {
+	id: "wrapped.md";
+  slug: "wrapped";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
