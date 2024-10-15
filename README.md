@@ -2,4 +2,4 @@
 
 built using Astro, TailwindCSS, and anime.js
 
-[danielyang.vercel.app]
+(link)[danielyang.vercel.app]
