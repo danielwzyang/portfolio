@@ -8,11 +8,11 @@ const projects: CollectionEntry<"projects">[] = await getCollection("projects")
 
 <Layout title="projects" desc="some of my projects">
     <div class="mx-3 mt-2 text-[#505050]">
-        <a href="/" class="hover:underline">&lt;- home</a>
+        &lt;- <a href="/" class="hover:underline">home</a> / projects
     </div>
     <div class="mt-5 flex flex-wrap justify-center gap-5 max-w-[95vw] mx-auto">
         {
-            projects.map((e) => (
+            projects.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)).map((e) => (
                 <Project
                     title={e.data.title}
                     date={e.data.date}
