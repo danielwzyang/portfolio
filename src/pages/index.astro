@@ -4,7 +4,7 @@ import Layout from "../Layout.astro"
 
 <Layout title="daniel yang" desc="my portfolio">
     <div id="skipWrapper" class="absolute right-1 top-1 flex items-center text-[#505050]">
-        <h1 class="hidden lg:block">[space]</h1><img id="skip" src="/skip.svg" alt="skip"/>
+        <h1 class="hidden lg:block">[space]</h1><img id="skip" src="/icons/skip.svg" alt="skip"/>
     </div>
     <div class="h-[90vh] w-full flex items-center justify-center text-3xl sm:text-4xl" id="wrapper">
         { "{ username }".split("").map(e => <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>) }
@@ -21,9 +21,9 @@ import Layout from "../Layout.astro"
         <hr id="info" class="border-[#505050]">
         <div id="socialsWrapper" class="w-full ml-auto justify-end flex space-x-3 relative">
             <a id="socials" href="projects" class="absolute left-0 hover:underline">Projects</a>
-            <a id="socials" href="https://github.com/danielwzyang/" target="_blank"><img src="/github.svg" alt="github"/></a>
-            <a id="socials" href="mailto:danielwzyang@gmail.com" target="_blank"><img src="/email.svg" alt="email"/></a>
-            <a id="socials" href="https://www.linkedin.com/in/danielwzyang/" target="_blank"><img src="/linkedin.svg" alt="linkedin"/></a>
+            <a id="socials" href="https://github.com/danielwzyang/" target="_blank"><img src="/icons/github.svg" alt="github"/></a>
+            <a id="socials" href="mailto:danielwzyang@gmail.com" target="_blank"><img src="/icons/email.svg" alt="email"/></a>
+            <a id="socials" href="https://www.linkedin.com/in/danielwzyang/" target="_blank"><img src="/icons/linkedin.svg" alt="linkedin"/></a>
         </div>
     </div>
 
