@@ -32,7 +32,8 @@ import Layout from "../../Layout.astro"
     <div class="w-[500px] max-w-[80vw] mx-auto text-justify text-[#505050] space-y-5">
         <Content/>
         <hr class="border-[#505050]">
-        <div class="flex justify-end space-x-3">
+        <div class="flex justify-end space-x-3 relative">
+            <h1 class="absolute left-0">{ project.data.posted }</h1>
             { project.data.link ? <a href={project.data.link} target="_blank"><img src="/link.svg"/></a> : <></>}
             { project.data.github ? <a href={project.data.github} target="_blank"><img src="/github.svg"/></a> : <></>}
         </div>

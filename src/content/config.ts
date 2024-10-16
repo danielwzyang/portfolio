@@ -7,7 +7,8 @@ const projectsCollection = defineCollection({
         date: z.string(),
         desc: z.string(),
         link: z.string().optional(),
-        github: z.string().optional()
+        github: z.string().optional(),
+        posted: z.string()
     })
 })
 

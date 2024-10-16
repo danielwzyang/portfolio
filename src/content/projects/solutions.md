@@ -4,6 +4,7 @@ date: september 2024
 desc: solutions website using HTML, JS, TailwindCSS, Python, and highlight.js
 link: https://danielwzyang.github.io/apcsa-solutions/
 github: https://github.com/danielwzyang/apcsa-solutions
+posted: 10.15.24
 ---
 I'm currently taking APCSA as of writing this, and my teacher assigns a lot of codingbat problems to practice Java. I already know Java, so I decided to try to help my friends by sharing all the solutions as well as explanations to their logic. After building the website, I contacted my teacher to ask her if it was okay for me to share it if I released the solutions after their due dates. Unfortunately, I wasn't allowed to and the website is no longer being updated, but it helped me practice my basic web building skills. 
 <br><br>

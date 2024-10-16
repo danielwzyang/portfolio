@@ -4,6 +4,7 @@ date: june 2024
 desc: game built in godot for final project in intro to cs class
 github: https://github.com/danielwzyang/dillou
 link: https://danielyang.itch.io/dillou
+posted: 10.16.24
 ---
 For my intro to CS class, our teacher gave us a final project to do whatever we wanted. I decided to make a game based off of Pou, a mobile pet simulation game. Instead of Pou, the pet was our teacher. My teacher ended up bringing his six year old son to work one day, and his son played my game.
 <br><br>

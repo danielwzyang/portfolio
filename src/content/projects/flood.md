@@ -3,6 +3,7 @@ title: flood relief network
 date: september 2024
 desc: website for a volunteering club using NextJS, TailwindCSS, Google Calendar API, Day.js, and shadcn/ui
 link: https://floodreliefnetwork.org/
+posted: 10.16.24
 ---
 My friend started a club centered around volunteering to help with the flooding issue in NYC. He needed a website to provide info about the club, so he asked me for help.
 <br><br>

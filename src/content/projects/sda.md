@@ -4,6 +4,7 @@ date: october 2024
 desc: website for my own club using NextJS, TailwindCSS, Framer Motion, Firestore, Cloudinary, and shadcn/ui
 github: https://github.com/danielwzyang/sda
 link: https://sda.clothing/
+posted: 10.16.24
 ---
 I founded a club called Stuyvesant Donated Apparel with my friends in the middle of sophomore year. Our main goal was to design clothes and sell them to use the profits for charity. To advertise our first drop, I took pictures of our models wearing our clothing, and I wanted to make a website to host those pictures. 
 <br><br>
