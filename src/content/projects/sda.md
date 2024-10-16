@@ -1,7 +1,7 @@
 ---
 title: stuy donated apparel
 date: october 2024
-desc: club website using NextJS, TailwindCSS, shadcn/ui, Framer Motion, Cloudinary, and Firestore
+desc: website for my own club using NextJS, TailwindCSS, Framer Motion, Firestore, Cloudinary, and shadcn/ui
 github: https://github.com/danielwzyang/sda
 link: https://sda.clothing/
 ---
