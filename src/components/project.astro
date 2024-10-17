@@ -9,9 +9,7 @@ interface Props {
 const { title, date, desc, slug } = Astro.props
 ---
 
-<div
-    class="w-[500px] max-w-[85vw] hover:shadow-lg hover:shadow-[#75757528] border border-[#505050] rounded-xl relative py-5 px-7"
->
+<div class="w-[400px] max-w-[85vw] hover:shadow-lg hover:shadow-[#75757528] border border-[#505050] rounded-xl relative py-5 px-7">
     <a href={"projects/" + slug}>
         <h1 class="text-xl">{title}</h1>
         <h1 class="text-[#929292]">{date}</h1>
