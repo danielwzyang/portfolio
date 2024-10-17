@@ -1,7 +1,7 @@
 ---
 title: apcsa solutions
 date: september 2024
-desc: solutions website using HTML, JS, TailwindCSS, Python, and highlight.js
+desc: website using HTML, JS, TailwindCSS, Python, and highlight.js to provide solutions and explanations for APCSA practice problems
 link: https://danielwzyang.github.io/apcsa-solutions/
 github: https://github.com/danielwzyang/apcsa-solutions
 posted: 10.15.24

@@ -1,7 +1,7 @@
 ---
 title: shelfmates
 date: august 2024
-desc: frontend website using NextJS and TailwindCSS + Amazon web scraper using Python and BS4
+desc: frontend website to display collectibles using NextJS, Tailwind CSS, and an Amazon web scraper using Python and BS4
 link: https://shelfmates.netlify.app/shop
 posted: 10.16.24
 ---

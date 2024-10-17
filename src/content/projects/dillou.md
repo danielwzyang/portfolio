@@ -1,7 +1,7 @@
 ---
 title: dillou
 date: june 2024
-desc: game built in godot for final project in intro to cs class
+desc: pet simulator game built in Godot for final project in intro to cs class
 github: https://github.com/danielwzyang/dillou
 link: https://danielyang.itch.io/dillou
 posted: 10.16.24
