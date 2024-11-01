@@ -21,8 +21,8 @@ import Layout from "../../Layout.astro"
 
 <Layout title={project.data.title} desc={project.data.desc}>
     <div class="mx-3 mt-2 text-[#505050]">
-        &lt;- <a href="/" class="hover:underline">home</a> / 
-        <a href="/projects" class="hover:underline">projects</a> / {project.slug}
+        &lt;- <a href="/portfolio" class="hover:underline">home</a> / 
+        <a href="/portfolio/projects" class="hover:underline">projects</a> / {project.slug}
     </div>
 
     <h1 class="my-5 text-xl sm:text-2xl mx-auto w-fit max-w-[85vw] gap-x-2 flex text-center">
@@ -34,8 +34,8 @@ import Layout from "../../Layout.astro"
         <hr class="border-[#505050]">
         <div class="flex justify-end space-x-3 relative">
             <h1 class="absolute left-0">{ project.data.posted }</h1>
-            { project.data.link ? <a href={project.data.link} target="_blank"><img src="/icons/link.svg"/></a> : <></>}
-            { project.data.github ? <a href={project.data.github} target="_blank"><img src="/icons/github.svg"/></a> : <></>}
+            { project.data.link ? <a href={project.data.link} target="_blank"><img src="/portfolio/icons/link.svg"/></a> : <></>}
+            { project.data.github ? <a href={project.data.github} target="_blank"><img src="/portfolio/icons/github.svg"/></a> : <></>}
         </div>
     </div>
 </Layout>
