@@ -155,6 +155,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"minionese.md": {
+	id: "minionese.md";
+  slug: "minionese";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "sda.md": {
 	id: "sda.md";
   slug: "sda";
