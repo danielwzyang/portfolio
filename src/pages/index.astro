@@ -3,27 +3,76 @@ import Layout from "../Layout.astro"
 ---
 
 <Layout title="daniel yang" desc="my portfolio">
-    <div id="skipWrapper" class="absolute right-1 top-1 flex items-center text-[#505050]">
-        <h1 class="hidden lg:block">[space]</h1><img id="skip" src="/portfolio/icons/skip.svg" alt="skip"/>
+    <div
+        id="skipWrapper"
+        class="absolute right-1 top-1 flex items-center text-[#505050]"
+    >
+        <h1 class="hidden lg:block">[space]</h1><img
+            id="skip"
+            src="/portfolio/icons/skip.svg"
+            alt="skip"
+        />
     </div>
-    <div class="h-[90vh] w-full flex items-center justify-center text-3xl sm:text-4xl" id="wrapper">
-        { "{ username }".split("").map(e => <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>) }
+    <div
+        class="h-[90vh] w-full flex items-center justify-center text-3xl sm:text-4xl"
+        id="wrapper"
+    >
+        {
+            "{ username }"
+                .split("")
+                .map((e) => (
+                    <h1 class="text hidden">{e == " " ? "\u00A0" : e}</h1>
+                ))
+        }
     </div>
-    <div class="w-[600px] max-w-[80vw] text-[#505050] text-justify mx-auto hidden space-y-5" id="infoWrapper">
-        <p id="info">Hi! My name is Daniel, and I'm a junior at Stuyvesant High School. I started coding in probably third or fourth grade and have been doing it ever since.</p>
+    <div
+        class="w-[600px] max-w-[80vw] text-[#505050] text-justify mx-auto hidden space-y-5"
+        id="infoWrapper"
+    >
+        <p id="info">
+            Hi! My name is Daniel, and I'm a junior at Stuyvesant High School. I started coding in probably third or fourth grade and have been doing it ever since. Currently I'm focused on web development and have recently started robotics at StuyPulse!
+        </p>
 
-        <p id="info">I started with Javascript, but I fell in love with Python for its simplicity. I made a couple scripts for fun to help me parse data, like predicting my Spotify Wrapped, scraping data from Amazon, and building HTML pages from text files. I also used Python to learn data structures and algorithms with Leetcode, and I've been trying to learn some C++ in hopes of competing.</p>
+        <hr id="info" class="border-[#505050]" />
+        <div
+            id="socialsWrapper"
+            class="w-full ml-auto justify-end flex space-x-3 relative"
+        >
+            <a
+                id="socials"
+                href="/portfolio/projects"
+                class="absolute left-0 group"
+            >
+                Projects
+                <hr class="border-[#505050] w-0 group-hover:w-full transition-all mx-auto"/>
+            </a>
 
-        <p id="info">I have many other side projects using different languages and frameworks like Java, React Native, and Godot, but I mostly stick to Javascript and Python.</p>
-        
-        <p id="info">Recently, I started learning web development using frameworks like NextJS and TailwindCSS, and I made a couple websites for some clubs that I'm in. I'm currently trying out Astro since it's a lot more lightweight compared to Next, and it's what this site is made with.</p>
+            <a
+                id="socials"
+                href="https://github.com/danielwzyang/"
+                target="_blank"
+                class="hover:scale-110 transition"
+            >
+                <img src="/portfolio/icons/github.svg" alt="github" />
+            </a>
 
-        <hr id="info" class="border-[#505050]">
-        <div id="socialsWrapper" class="w-full ml-auto justify-end flex space-x-3 relative">
-            <a id="socials" href="/portfolio/projects" class="absolute left-0 hover:underline">Projects</a>
-            <a id="socials" href="https://github.com/danielwzyang/" target="_blank"><img src="/portfolio/icons/github.svg" alt="github"/></a>
-            <a id="socials" href="mailto:danielwzyang@gmail.com" target="_blank"><img src="/portfolio/icons/email.svg" alt="email"/></a>
-            <a id="socials" href="https://www.linkedin.com/in/danielwzyang/" target="_blank"><img src="/portfolio/icons/linkedin.svg" alt="linkedin"/></a>
+            <a
+                id="socials"
+                href="mailto:danielwzyang@gmail.com"
+                target="_blank"
+                class="hover:scale-110 transition"
+            >
+                <img src="/portfolio/icons/email.svg" alt="email" />
+            </a>
+
+            <a
+                id="socials"
+                href="https://www.linkedin.com/in/danielwzyang/"
+                target="_blank"
+                class="hover:scale-110 transition"
+            >
+                <img src="/portfolio/icons/linkedin.svg" alt="linkedin" />
+            </a>
         </div>
     </div>
 

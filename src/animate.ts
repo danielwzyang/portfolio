@@ -21,8 +21,7 @@ var animation = anime({
 
         "danielwzyang".split("").forEach(e => {
             const letter = document.createElement("h1")
-            letter.classList.add("text")
-            letter.classList.add("opacity-0")
+            letter.className = "text opacity-0 hover:scale-110"
             letter.innerHTML = e == " " ? "\u00A0" : e
             wrapper!.appendChild(letter)
         })
@@ -51,7 +50,7 @@ var animation = anime({
                     targets: "#info",
                     opacity: [0, 1],
                     delay: anime.stagger(200),
-                    duration: 3000,
+                    duration: 2000,
                 })
 
                 // stagger socials reveal
@@ -59,7 +58,7 @@ var animation = anime({
                     targets: "#socials",
                     opacity: [0, 1],
                     translateX: [-100, 0],
-                    delay: anime.stagger(100, { start: 1000, direction: "reverse" }),
+                    delay: anime.stagger(100, { start: 500, direction: "reverse" }),
                     easing: "spring(1, 100, 10, 0)",
                     duration: 3000
                 })
