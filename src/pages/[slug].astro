@@ -16,13 +16,14 @@ interface Props {
 const { project } = Astro.props
 const { Content } = await project.render()
 
-import Layout from "../../Layout.astro"
+import Layout from "../Layout.astro"
+
+
 ---
 
 <Layout title={project.data.title} desc={project.data.desc}>
     <div class="mx-3 mt-2 text-[#505050]">
-        &lt;- <a href="/portfolio" class="hover:underline">home</a> / 
-        <a href="/portfolio/projects" class="hover:underline">projects</a> / {project.slug}
+        &lt;- <a href="/portfolio" class="hover:underline">home</a> / {project.slug}
     </div>
 
     <h1 class="my-5 text-xl sm:text-2xl mx-auto w-fit max-w-[85vw] gap-x-2 flex text-center">

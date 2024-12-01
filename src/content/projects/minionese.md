@@ -1,7 +1,7 @@
 ---
 title: minionese
 date: october 2024
-desc: an interpreted language from scratch written in Java, including the lexer and the parser.
+desc: an interpreted language from scratch
 github: https://github.com/danielwzyang/minionese
 posted: 11.3.24
 ---

@@ -41,27 +41,10 @@ var animation = anime({
                     duration: 2000
                 })
 
-                // reveal info animation
+                // reveal info
                 const infoWrapper = document.getElementById("infoWrapper")
                 infoWrapper!.classList.remove("hidden")
                 infoWrapper!.classList.add("flex-col")
-
-                anime({
-                    targets: "#info",
-                    opacity: [0, 1],
-                    delay: anime.stagger(200),
-                    duration: 2000,
-                })
-
-                // stagger socials reveal
-                anime({
-                    targets: "#socials",
-                    opacity: [0, 1],
-                    translateX: [-100, 0],
-                    delay: anime.stagger(100, { start: 500, direction: "reverse" }),
-                    easing: "spring(1, 100, 10, 0)",
-                    duration: 3000
-                })
 
                 // title moving animation
                 anime({
@@ -79,7 +62,7 @@ skip!.addEventListener("click", () => {
     skipAnimation()
 })
 
-onkeydown = (event) => { if (event.code == "Space") skipAnimation() }
+onkeydown = (event) => { if (event.key == "x") skipAnimation() }
 
 function skipAnimation() {
     animation.pause()
